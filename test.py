@@ -16,3 +16,11 @@ g.add_edge(2, 6)
 nx.draw(g)
 
 plt.show()
+
+# 默认情况下，networkX 创建的是无向图
+G = nx.Graph()
+print(G.is_directed())
+
+# 创建有向图
+H = nx.DiGraph()
+print(H.is_directed())
