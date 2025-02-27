@@ -19,7 +19,13 @@ class GATLayer(nn.Module):
         """
         self.g = g  # dgl的一个graph实例
         self.fc = nn.Linear(in_dim, out_dim, bias=False)  # 对节点进行通用的映射的fc
+        # 这一步是对每个节点的特征进行线性变换，通常用于特征降维或升维。
         self.attn_fc = nn.Linear(2 * out_dim, 1, bias=False)  # 计算edge attention的fc
+        # 这是另一个线性变换模块，用于计算边的注意力系数。
+        # 2 * out_dim 是输入特征的维度，因为注意力机制通常需要结合源节点和目标节点的特征。
+        # 1 是输出特征的维度，表示计算得到的注意力系数。
+        # bias=False 表示不使用偏置项。
+        # self.attn_fc 是一个线性层，用于计算边的注意力权重。
         self.reset_parameters()  # 参数初始化
 
     """
