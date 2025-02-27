@@ -6,3 +6,7 @@ https://datawhalechina.github.io/grape-book/#/docs/01%E4%BB%8B%E7%BB%8D/01%E4%BB
 * GraphSAGE.py 实验结果：
 
 ![alt text](GraphSAGE.png)
+
+* R-GCN.py 实验结果：
+
+![alt text](R-GCN.png)
